@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  namespace: webapp
+  labels:
+    app: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: 123456789012.dkr.ecr.eu-west-3.amazonaws.com/example-app:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "50m"       # 0.05 CPU cores
+              memory: "64Mi"   # 64 MiB RAM
+            limits:
+              cpu: "250m"      # 0.25 CPU cores
+              memory: "128Mi"  # 128 MiB RAM
