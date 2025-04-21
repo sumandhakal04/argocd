@@ -1,0 +1,19 @@
+# Ignore IDE and OS generated files
+.idea/
+.vscode/
+.DS_Store
+
+# Ignore temporary and backup files
+*.log
+*.tmp
+*.swp
+*.bak
+*.yaml~
+
+# Ignore credentials or environment files
+*.kubeconfig
+.env
+
+# Python cache (if using Python for tooling)
+__pycache__/
+*.pyc
