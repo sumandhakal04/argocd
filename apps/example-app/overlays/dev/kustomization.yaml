@@ -6,6 +6,7 @@ resources:
 patchesStrategicMerge:
   - deployment-patch.yaml
   - hpa-patch.yaml
+  - namespace.yaml
 images:
   - name: nginx
     newTag: latest  ## for real apps, when a new commit is created, a docker image with that tag is created and here referred.
