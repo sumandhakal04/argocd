@@ -2,7 +2,6 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: onlineshop-hpa
-  namespace: onlineshop-dev
 spec:
   scaleTargetRef:
     apiVersion: apps/v1

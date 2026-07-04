@@ -1,13 +1,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: webapp-hpa
-  namespace: webapp
+  name: onlineshop-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: webapp
+    name: online-shop
   minReplicas: 1
   maxReplicas: 10
   metrics:
