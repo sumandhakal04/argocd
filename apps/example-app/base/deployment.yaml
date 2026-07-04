@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
-  namespace: webapp
+  name: example-app
+  namespace: exampleapp-dev
   labels:
     app: webapp
 spec:
